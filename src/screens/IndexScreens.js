@@ -5,7 +5,7 @@ import { Context } from '../context/BlogContext';
 
 const IndexScreen = () => {
   const { data, addBlogPost } = useContext(Context);
-  console.log(`this is the ${data}`)
+  console.log(`this is the ${addBlogPost}`)
 
   return (
     <View>
