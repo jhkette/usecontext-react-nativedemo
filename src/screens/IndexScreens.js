@@ -4,15 +4,15 @@ import { Context } from '../context/BlogContext';
 
 
 const IndexScreen = () => {
-  const { data, addBlogPost } = useContext(Context);
-  console.log(`this is the ${addBlogPost}`)
+  const { state, addBlogPost } = useContext(Context);
+  console.log(`this is the ${state}`)
 
   return (
     <View>
       <Text> Index Screen </Text>
       <Button title="add post" onPress={addBlogPost} />
       <FlatList
-        data={data}
+        data={state}
         renderItem={({ item }) => {
           return <Text>{item.title}</Text>;
         }}
